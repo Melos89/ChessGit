@@ -10,10 +10,9 @@ namespace ChessLogic
     {
        public GameBrain()
        {
-           MovePieces BeMoved = new MovePieces();
 
            Pawn wp1 = new Pawn(new PairPos(0,  30), "W");//Creates pawns with x and y co-ordinates and assigning colour
-           Pawn wp2 = new Pawn(new PairPos(10, 30), "W");//W = White, B = Black
+           Pawn wp2 = new Pawn(new PairPos(10, 30), "W");
            Pawn wp3 = new Pawn(new PairPos(20, 30), "W");
            Pawn wp4 = new Pawn(new PairPos(30, 30), "W");
            Pawn wp5 = new Pawn(new PairPos(40, 30), "W");
@@ -55,12 +54,12 @@ namespace ChessLogic
 
            foreach (var item in whitePieces)
            {
-               item.TellUs(item);
+               item.SkrivUt(item);
            }
 
            foreach (var item in blackPieces)
            {
-               item.TellUs(item);
+               item.SkrivUt(item);
            }
 
 

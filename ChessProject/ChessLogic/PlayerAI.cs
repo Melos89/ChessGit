@@ -19,13 +19,5 @@ namespace ChessLogic
            int svar = randomizer.Next(pieces.Count);
             return svar;
         }
-        public static void moveShapes(List<ChessPieces> pieces)
-        {
-            foreach (var item in pieces)
-            {
-                PairPos P = item.GetLocation();
-                item.SetLocation(P);
-            }
-        }
     }
 }
