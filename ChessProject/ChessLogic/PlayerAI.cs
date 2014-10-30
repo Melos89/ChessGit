@@ -8,7 +8,7 @@ namespace ChessLogic
 {
     public class PlayerAI
     {
-        public PlayerAI(List<ChessPieces> pieces)
+        public PlayerAI(List<ChessPieces> pieces)//PlayerAI construct that takes in a list.
         {
 
         }

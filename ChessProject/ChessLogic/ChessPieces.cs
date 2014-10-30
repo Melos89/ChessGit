@@ -16,7 +16,6 @@ namespace ChessLogic
         public int PositionY { get; set; }//Property to get and set the Y position on the board,
         public virtual void TellPosition()
         {
-            Console.Write( " is at position [" + PositionX + "," + PositionY + "]");
         }
         public void SkrivUt(ChessPieces piece)
         {
