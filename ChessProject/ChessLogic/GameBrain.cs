@@ -11,8 +11,9 @@ namespace ChessLogic
        public GameBrain()
        {
 
+
            Pawn wp1 = new Pawn(new PairPos(0,  30), "W");//Creates pawns with x and y co-ordinates and assigning colour
-           Pawn wp2 = new Pawn(new PairPos(10, 30), "W");
+           Pawn wp2 = new Pawn(new PairPos(10, 30), "W");//W = White, B = Black
            Pawn wp3 = new Pawn(new PairPos(20, 30), "W");
            Pawn wp4 = new Pawn(new PairPos(30, 30), "W");
            Pawn wp5 = new Pawn(new PairPos(40, 30), "W");
@@ -52,19 +53,21 @@ namespace ChessLogic
            blackPieces.Add(bp7);
            blackPieces.Add(bp8);
 
-           foreach (var item in whitePieces)
+
+
+           foreach (var item in whitePieces)//Loop that calls the TellUs method in the ChessPieces class(Not needed here)
            {
-               item.SkrivUt(item);
+               item.TellUs(item);
            }
 
-           foreach (var item in blackPieces)
+           foreach (var item in blackPieces)//Loop that calls the TellUs method in the ChessPieces class(Not needed here)
            {
-               item.SkrivUt(item);
+               item.TellUs(item);
            }
 
 
-           PlayerAI PlayerWhite = new PlayerAI(whitePieces);//Gives player white a list of white pieces
-           PlayerAI PlayerBlack = new PlayerAI(blackPieces);//Gives player black a list of black pieces
+           PlayerAI PlayerWhite = new PlayerAI(whitePieces);//Gives Mr White a list of white pieces
+           PlayerAI PlayerBlack = new PlayerAI(blackPieces);//Gives Mr Black a list of black pieces
 
 
        }        

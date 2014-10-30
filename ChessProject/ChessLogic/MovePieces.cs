@@ -10,13 +10,15 @@ namespace ChessLogic
     {
         protected PairPos Location; //Iniated a co-ord class called Location
 
-        public PairPos GetLocation() //Gets the value (((Use to fetch location in logger to then print in cmd?)))
+        public PairPos GetLocation() //Gets the value 
         {
             return Location;
+            //(((Use to fetch location in logger and then print in cmd?)))
         }
-        public void SetLocation(PairPos NewLocation) //Sets the value (((Method to select new location inside PlayerAI???)))
+        public void SetLocation(PairPos NewLocation) //Sets the value
         {
             Location = NewLocation;
+            //(((Method to select new location inside PlayerAI???)))
         }
 
     }

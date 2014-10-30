@@ -15,7 +15,7 @@ namespace ChessLogic
             XYPos = stuff;
             colour = Colour;
         }
-        public override void TellPosition()// Sets the cursor position at the supplied X/Y co-ordinates
+        public override void TellPosition()// Sets the cursor position at the supplied X/Y co-ordinates and prints out The piece at its location
         {
             PositionX = XYPos.X;
             PositionY = XYPos.Y;
