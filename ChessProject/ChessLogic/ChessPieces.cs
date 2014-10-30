@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChessLogic
 {
-    public abstract class ChessPieces//Our base class for pieces, 
+    public abstract class ChessPieces : MovePieces//Our base class for pieces, 
     {
         internal int _strength;//Their value
         internal string colour;
@@ -17,7 +17,7 @@ namespace ChessLogic
         public virtual void TellPosition()
         {
         }
-        public void SkrivUt(ChessPieces piece)
+        public void TellUs(ChessPieces piece)
         {
             piece.TellPosition();
         }

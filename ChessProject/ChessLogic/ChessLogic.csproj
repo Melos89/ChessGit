@@ -42,6 +42,7 @@
     <Compile Include="Bishop.cs" />
     <Compile Include="ChessLogic.cs" />
     <Compile Include="ChessPieces.cs" />
+    <Compile Include="MovePieces.cs" />
     <Compile Include="PairPos.cs" />
     <Compile Include="GameBrain.cs" />
     <Compile Include="King.cs" />
