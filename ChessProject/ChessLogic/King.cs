@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChessLogic
 {
-    class King
+    class Kning
     {
     }
 }
