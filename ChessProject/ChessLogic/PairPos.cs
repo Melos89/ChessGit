@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace ChessLogic
 {
-    class PairPos
+    public class PairPos
     {
-        public int x;
-        public int y;
+            public int X;
+            public int Y;
+            public PairPos(int x, int y)
+            {
+                X = x;
+                Y = y;
+            }
     }
 }

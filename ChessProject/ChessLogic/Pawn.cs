@@ -6,13 +6,25 @@ using System.Threading.Tasks;
 
 namespace ChessLogic
 {
-    class Pawn
+    public class Pawn : ChessPieces
     {
 
-        string name = "Farmer Bill";
-        string colour;
-        int value;
-       
-
+        public Pawn(PairPos stuff)
+        {
+            XYPos = stuff;
+        }
+        public override void TellPosition()
+        {
+            PositionX = XYPos.X;
+            PositionY = XYPos.Y;
+            Console.SetCursorPosition(PositionX, PositionY);
+            Console.Write("Pawn");
+            
+        }
+        public void DoImportantStuff()
+        {
+            Console.WriteLine("Farming yo");
+        }
+        
     }
 }

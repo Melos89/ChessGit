@@ -7,7 +7,7 @@
     <ProjectGuid>{74E69CE7-A080-418C-94F1-C88C1A839971}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ChessProject</RootNamespace>
+    <RootNamespace>ChessLogic</RootNamespace>
     <AssemblyName>ChessProject</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -46,6 +46,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChessLogic\ChessLogic.csproj">
+      <Project>{b5fbb29d-2f41-45d9-92a4-3377e4147f20}</Project>
+      <Name>ChessLogic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="Bishop.cs" />
     <Compile Include="ChessLogic.cs" />
+    <Compile Include="ChessPieces.cs" />
     <Compile Include="PairPos.cs" />
     <Compile Include="GameBoard.cs" />
     <Compile Include="King.cs" />

@@ -8,7 +8,6 @@ namespace ChessLogic
 {
     public class ChessLogic
     {
-        GameBoard fan = new GameBoard();
-        
+
     }
 }
