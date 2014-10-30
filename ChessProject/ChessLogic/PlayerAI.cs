@@ -8,9 +8,16 @@ namespace ChessLogic
 {
     public class PlayerAI
     {
+        List<ChessPieces> Pieces;
+        Random randomizer = new Random();
         public PlayerAI(List<ChessPieces> pieces)//PlayerAI construct that takes in a list.
         {
-
+           Pieces = pieces;
+        }
+        public int RandomChesspiece(List<ChessPieces> pieces)
+        {
+           int svar = randomizer.Next(pieces.Count);
+            return svar;
         }
     }
 }
