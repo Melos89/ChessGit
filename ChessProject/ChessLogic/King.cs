@@ -8,5 +8,6 @@ namespace ChessLogic
 {
     class King
     {
+
     }
 }

@@ -9,7 +9,7 @@ namespace ChessLogic
     public class Pawn : ChessPieces
     {
 
-        public Pawn(PairPos stuff)
+        public Pawn(PairPos stuff)//Constructor that takes a class
         {
             XYPos = stuff;
         }

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace ChessLogic
 {
-    class PlayerAI
+    public class PlayerAI
     {
+        public PlayerAI()
+        {
+
+        }
     }
 }

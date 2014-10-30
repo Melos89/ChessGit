@@ -43,7 +43,7 @@
     <Compile Include="ChessLogic.cs" />
     <Compile Include="ChessPieces.cs" />
     <Compile Include="PairPos.cs" />
-    <Compile Include="GameBoard.cs" />
+    <Compile Include="GameBrain.cs" />
     <Compile Include="King.cs" />
     <Compile Include="Knight.cs" />
     <Compile Include="Logger.cs" />
