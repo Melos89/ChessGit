@@ -18,8 +18,9 @@ namespace ChessLogic
         }
         //public ChessPieces RandomChesspiece(List<ChessPieces> pieces) //Randomly picks an item from the length of the list. ((Unfinished/Work in progress))
         //{
-        //    int svar = randomizer.Next(pieces.Count);
-        //    return test;
+        //    //int svar = randomizer.Next(pieces.Count);as.
+        //    //pieces.GetEnumerator();
+        //    //return pieces;
         //}
 
         //public void moveBits(List<ChessPieces> pieces)  //trying to get and set new values for pieces.

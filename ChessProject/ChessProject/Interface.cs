@@ -10,6 +10,7 @@ namespace ChessLogic
     {
         static void Main(string[] args)
         {
+            
             GameBrain Go = new GameBrain();
             
                 Console.ReadLine();

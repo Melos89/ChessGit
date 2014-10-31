@@ -8,7 +8,7 @@ namespace ChessLogic
 {
     public class Pawn : ChessPieces
     {
-        public Pawn(PairPos stuff, string Colour, string thing)
+        public Pawn(PairPos stuff, int Colour, string thing)
         {/*Constructor that takes a class, then saves the X/Y values 
           * and a string with the colour of the piece.*/
             XYPos = stuff;

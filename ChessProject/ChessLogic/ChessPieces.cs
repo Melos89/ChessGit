@@ -9,7 +9,7 @@ namespace ChessLogic
     public abstract class ChessPieces : MovePieces//Our base class for pieces, ((Possible inheritance for getset new positions? or waste of space.))
     {
         public int strength { get; set; }//Their value
-        public string colour { get; set; }
+        public int colour { get; set; }
         internal string type;//Their type (e.g Pawn)
         public PairPos XYPos; //Created an instance of the co-ordinates class to save away the pieces location
         public int PositionX { get; set; }//Property to get and set the X position on the board,
