@@ -10,26 +10,24 @@ namespace ChessLogic
     {
         List<ChessPieces> Pieces; //Iniated a list to hold Chess pieces
 
-        Random randomizer = new Random(); // Initiated a new random class
         
         public PlayerAI(List<ChessPieces> pieces)//PlayerAI construct that takes in a list.
         {
            Pieces = pieces;
         }
-        //public ChessPieces RandomChesspiece(List<ChessPieces> pieces) //Randomly picks an item from the length of the list. ((Unfinished/Work in progress))
-        //{
-        //    //int svar = randomizer.Next(pieces.Count);as.
-        //    //pieces.GetEnumerator();
-        //    //return pieces;
-        //}
-
-        //public void moveBits(List<ChessPieces> pieces)  //trying to get and set new values for pieces.
-        //{                                                //wrong location for this method?
-        //    foreach (var item in pieces)
-        //    {
-        //        PairPos test = item.GetLocation();
-        //        item.SetLocation(test);
-        //    }
-        //}
+        public List<ChessPieces> CanPiecesMove(List<ChessPieces> OwnList) /*Method that takes initial list, checks if a piece can move, 
+           if the piece can move it gets placed in a new list that will be used to pick what piece to play.*/
+        {
+            List<ChessPieces> CanMoveList = new List<ChessPieces>(); 
+            foreach (var piece in OwnList)
+            {
+                piece.CheckLocation(piece);
+                if (piece.CanMove == true)
+                {
+                    CanMoveList.Add(piece);
+                }
+            }
+            return CanMoveList;
+        }
     }
 }

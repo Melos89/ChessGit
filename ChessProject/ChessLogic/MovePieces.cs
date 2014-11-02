@@ -17,7 +17,6 @@ namespace ChessLogic
         }
         public void SetLocation(PairPos NewLocation) //Sets the value
         {
-            Location = null;
             Location = NewLocation;
             //(((Method to select new location inside PlayerAI???)))
         }
