@@ -14,22 +14,22 @@ namespace ChessLogic
            ColoursEnum EC = new ColoursEnum(); //The Enum thing
            int W = (int)EC.w;
            int B = (int)EC.b;
-           Pawn wp1 = new Pawn(new PairPos(0,  30),"W","Pawn", 10);//Creates pawns with x and y co-ordinates and assigning colour
-           Pawn wp2 = new Pawn(new PairPos(10, 30), "W", "Pawn", 10);//W = White, B = Black and type = pawn.
-           Pawn wp3 = new Pawn(new PairPos(20, 30), "W", "Pawn", 10);
-           Pawn wp4 = new Pawn(new PairPos(30, 30), "W", "Pawn", 10);
-           Pawn wp5 = new Pawn(new PairPos(40, 30), "W", "Pawn", 10);
-           Pawn wp6 = new Pawn(new PairPos(50, 30), "W", "Pawn", 10);
-           Pawn wp7 = new Pawn(new PairPos(60, 30), "W", "Pawn", 10);
-           Pawn wp8 = new Pawn(new PairPos(70, 30), "W", "Pawn", 10);
-           Pawn bp1 = new Pawn(new PairPos(0, 5), "B", "Pawn", 20);
-           Pawn bp2 = new Pawn(new PairPos(10, 5), "B", "Pawn", 20);
-           Pawn bp3 = new Pawn(new PairPos(20, 5), "B", "Pawn", 20);
-           Pawn bp4 = new Pawn(new PairPos(30, 5), "B", "Pawn", 20);
-           Pawn bp5 = new Pawn(new PairPos(40, 5), "B", "Pawn", 20);
-           Pawn bp6 = new Pawn(new PairPos(50, 5), "B", "Pawn", 20);
-           Pawn bp7 = new Pawn(new PairPos(60, 5), "B", "Pawn", 20);
-           Pawn bp8 = new Pawn(new PairPos(70, 5), "B", "Pawn", 20);
+           Pawn wp1 = new Pawn(new PairPos(0,  30),"W","Pawn");//Creates pawns with x and y co-ordinates and assigning colour
+           Pawn wp2 = new Pawn(new PairPos(10, 30), "W", "Pawn");//W = White, B = Black and type = pawn.
+           Pawn wp3 = new Pawn(new PairPos(20, 30), "W", "Pawn");
+           Pawn wp4 = new Pawn(new PairPos(30, 30), "W", "Pawn");
+           Pawn wp5 = new Pawn(new PairPos(40, 30), "W", "Pawn");
+           Pawn wp6 = new Pawn(new PairPos(50, 30), "W", "Pawn");
+           Pawn wp7 = new Pawn(new PairPos(60, 30), "W", "Pawn");
+           Pawn wp8 = new Pawn(new PairPos(70, 30), "W", "Pawn");
+           Pawn bp1 = new Pawn(new PairPos(0, 5), "B", "Pawn");
+           Pawn bp2 = new Pawn(new PairPos(10, 5), "B", "Pawn");
+           Pawn bp3 = new Pawn(new PairPos(20, 5), "B", "Pawn");
+           Pawn bp4 = new Pawn(new PairPos(30, 5), "B", "Pawn");
+           Pawn bp5 = new Pawn(new PairPos(40, 5), "B", "Pawn");
+           Pawn bp6 = new Pawn(new PairPos(50, 5), "B", "Pawn");
+           Pawn bp7 = new Pawn(new PairPos(60, 5), "B", "Pawn");
+           Pawn bp8 = new Pawn(new PairPos(70, 5), "B", "Pawn");
 
 
            List<ChessPieces> WhitePieces = new List<ChessPieces>();//Creates a list for white folk and
@@ -63,28 +63,18 @@ namespace ChessLogic
 
 
 
-           Console.ReadLine();
+
 
            while (ActiveGame)
            {
                ClearTheBoard();
-               foreach (var wpiece in WhitePieces)
-               {
-                   wpiece.TellUs(wpiece);
-                   foreach (var bpiece in BlackPieces)
-                   {
-                       bpiece.TellUs(bpiece);
-                   }
-               }
                List<ChessPieces> WhitesList = PlayerWhite.CanPiecesMove(WhitePieces);
-               //MoveThis(WhiteList);
-               Console.ReadLine();
                //Method for choosing a piece from list to move here. Random engine?
                //Method for changing X and Y pos of piece here
                List<ChessPieces> BlackList = PlayerBlack.CanPiecesMove(BlackPieces);
                //Method for choosing a piece from list to move here. Random engine?
                //Method for changing X and Y pos of piece here
-               //Final method for turning ActiveGame = false; Basically method call to see if anything can move. if else, exit
+               //Final method for turning ActiveGame = false; Basically method call both lists and if they return empty exit, for now.
 
            }
 

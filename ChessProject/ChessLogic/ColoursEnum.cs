@@ -8,7 +8,7 @@ namespace ChessLogic
 {
     public class ColoursEnum
     {
-        public enum soldiers { W = 21, B };  //Trying out enum
+        public enum soldiers { W = 22, B };  //Trying out enum
        public int b = (int)soldiers.B;
        public int w = (int)soldiers.W;
 
