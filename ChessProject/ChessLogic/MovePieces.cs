@@ -20,6 +20,27 @@ namespace ChessLogic
             Location = NewLocation;
             //(((Method to select new location inside PlayerAI???)))
         }
+       public MovePieces()
+       {
+       }
+       public ChessPieces MoveThis(List<ChessPieces> Piece)
+       {
+           Random rnd = new Random();
+           int number = rnd.Next(Piece.Count);
+           return Piece[number];
+       }
+       public void MoveNow(ChessPieces piece)
+       {
+           if (piece.colour == "W")
+           {
+               piece.PositionY--;
+           }
+           else if (piece.colour == "B")
+           {
+               piece.PositionY++;
+           }
+
+       }
 
     }
 }

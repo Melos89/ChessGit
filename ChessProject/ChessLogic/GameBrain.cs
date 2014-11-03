@@ -61,17 +61,36 @@ namespace ChessLogic
            PlayerAI PlayerWhite = new PlayerAI(WhitePieces);//Gives Mr White a list of white pieces
            PlayerAI PlayerBlack = new PlayerAI(BlackPieces);//Gives Mr Black a list of black pieces
 
-
-
-
+           MovePieces moving = new MovePieces();
+           List<ChessPieces> WhiteList = PlayerWhite.CanPiecesMove(WhitePieces);
+           List<ChessPieces> BlackList = PlayerBlack.CanPiecesMove(BlackPieces);
+           foreach (var wpieces in WhiteList)
+           {
+               wpieces.TellUs(wpieces);
+           }
+           foreach (var bpieces in BlackPieces)
+           {
+               bpieces.TellUs(bpieces);
+           }
 
            while (ActiveGame)
            {
                ClearTheBoard();
-               List<ChessPieces> WhitesList = PlayerWhite.CanPiecesMove(WhitePieces);
+               WhiteList = PlayerWhite.CanPiecesMove(WhitePieces);
+               foreach (var wpieces in WhiteList)
+               {
+                   wpieces.TellNewPosition(wpieces);
+               }
+               foreach (var bpieces in BlackPieces)
+               {
+                   bpieces.TellNewPosition(bpieces);
+               }
+               moving.MoveNow(moving.MoveThis(WhitePieces));
                //Method for choosing a piece from list to move here. Random engine?
                //Method for changing X and Y pos of piece here
-               List<ChessPieces> BlackList = PlayerBlack.CanPiecesMove(BlackPieces);
+               BlackList = PlayerBlack.CanPiecesMove(BlackPieces);
+               moving.MoveNow(moving.MoveThis(BlackPieces));
+               Console.ReadKey();
                //Method for choosing a piece from list to move here. Random engine?
                //Method for changing X and Y pos of piece here
                //Final method for turning ActiveGame = false; Basically method call both lists and if they return empty exit, for now.

@@ -17,25 +17,22 @@ namespace ChessLogic
         public int PreviousX { get; set; }//To get the old value
         public int PreviousY { get; set; }//To get the old value
         public bool CanMove { get; set; }//set to true if its possible to move
-        public virtual void TellPosition() //start position Method that will be overridden by any piece containing an override method to be relevant for each seperate piece
+        public virtual void Origin() //start position Method that will be overridden by any piece containing an override method to be relevant for each seperate piece
         {
         }
-        public virtual void TellNewPosition(ChessPieces piece)//next position method that will be overriden by any piece containing an override method
+        public virtual void TellNewPosition(ChessPieces piece)
         {
+            piece.TellNewPosition(piece);
         }
         public void TellUs(ChessPieces piece) //Calls a method that will print out a piece name and start location
         {
-                piece.TellPosition(); 
-        }
-        public void TellNewShitYo(ChessPieces piece)//calls another method that prints a piece new location
-        {
-                piece.TellNewPosition(piece);
+                piece.Origin(); 
         }
         public ChessPieces CheckLocation(ChessPieces piece) //Move rules for all pieces, 
         {
             if (piece.colour == "W" && piece.type == "Pawn")
             {
-                if (PositionY++ == null)
+                if (PositionY++ != 21)
                 {
                     CanMove = true;
                 }
@@ -46,7 +43,7 @@ namespace ChessLogic
             }
             if (piece.colour == "B" && piece.type == "Pawn")
             {
-                if (PositionY-- == null)
+                if (PositionY-- !=22)
                 {
                     CanMove = true;
                 }

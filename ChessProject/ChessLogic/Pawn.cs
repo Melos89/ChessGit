@@ -15,7 +15,7 @@ namespace ChessLogic
             colour = Colour;
             type = thing;
         }
-        public override void TellPosition()// Sets the cursor position at the supplied X/Y co-ordinates and prints out The piece at its location
+        public override void Origin()// Sets the cursor position at the supplied X/Y co-ordinates and prints out The piece at its location
         {
             PositionX = XYPos.X;
             PositionY = XYPos.Y;
@@ -23,18 +23,13 @@ namespace ChessLogic
             Console.Write(colour + "P");
             
         }
-        public override void TellNewPosition(ChessPieces piece)
+        public override void TellNewPosition(ChessPieces pieces)
         {
-            PreviousX = PositionX;
-            PreviousY = PositionY;
-            PositionX = piece.PositionX;
-            PositionY = piece.PositionY;
-            Console.SetCursorPosition(PreviousX, PreviousY);
-            Console.Write("  ");
-            Console.SetCursorPosition(PositionX, PositionY);
-            Console.Write(colour + "P");
 
+            Console.SetCursorPosition(pieces.PositionX, pieces.PositionY);
+            Console.Write(colour + "P");
         }
+
         public void DoImportantStuff()//Useless
         {
             Console.WriteLine("Farming yo");
